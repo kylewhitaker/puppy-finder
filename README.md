@@ -13,7 +13,7 @@
   - Connect to MongoDB
     - `mongod`
   - Load data into local database
-    - `mongoimport --db puppy-finder --collection puppies --file data.json`
+    - `mongoimport --jsonArray --db puppy-finder --collection puppies --file data.json`
   - Pull source code from GitHub
     - TODO
   - Spin up Server
