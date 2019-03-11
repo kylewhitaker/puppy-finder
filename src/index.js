@@ -21,9 +21,11 @@ class App extends React.Component {
 
   render() {
     return (
-      <Carousel width="720px" showThumbs={false}>
-        {this.state.puppies}
-      </Carousel>
+      <div className="container">
+        <Carousel showThumbs={false}>
+          {this.state.puppies}
+        </Carousel>
+      </div>
     );
   }
 
