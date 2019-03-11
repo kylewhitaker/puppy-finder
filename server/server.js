@@ -27,6 +27,13 @@ const model = mongoose.model('Puppy', doggieSchema, 'puppies');
 const express = require('express');
 const app = express();
 
+// enable CORS
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 // Setup API endpoint, fetch puppy data from DB
 app.get('/', (req, res) => {
   model.find().exec((err, puppies) => {
