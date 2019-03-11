@@ -14,6 +14,37 @@ const getData = () => {
 }
 
 
+class Image extends React.Component {
+
+  render() {
+    return (
+      <div className="imageContainer">
+        <img className="img" id={this.props.title} src={this.props.image} width="650px" />
+        <canvas className="myCanvas" id={`canvas_${this.props.title}`} width="650" height="450"></canvas>
+      </div>
+    )
+  }
+
+  componentDidMount() {
+    if (this.props.canines.length === 0) return;
+    const canvas = document.getElementById(`canvas_${this.props.title}`);
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    this.props.canines.forEach(canine => {
+      const [[startX, startY], [endX, endY]] = canine.coordinates;
+      const diffX = endX - startX;
+      const diffY = endY - startY;
+      ctx.beginPath();
+      ctx.lineWidth = "5";
+      ctx.strokeStyle = "red";
+      ctx.rect(startX, startY, diffX, diffY);
+      ctx.stroke();
+    });
+  }
+
+}
+
+
 class Table extends React.Component {
 
   render() {
@@ -60,7 +91,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="container">
-        <Carousel width="720px" showThumbs={false}>
+        <Carousel showThumbs={false}>
           {this.state.puppies}
         </Carousel>
       </div>
@@ -73,7 +104,7 @@ class App extends React.Component {
         return (
           <div>
             <p className="title">{puppy.title}</p>
-            <img src={puppy.image}></img>
+            <Image title={puppy.title} image={puppy.image} canines={puppy.canines}></Image>
             <Table canines={puppy.canines}></Table>
           </div>
         )

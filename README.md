@@ -35,7 +35,7 @@
   - [x] The title of the image should display on the top of each page
   - [x] The image should display under the title
   - [x] A table should display below each image listing out the dogs grouped by type and age
-  - [ ] Plot the bounding boxes for each image
+  - [x] Plot the bounding boxes for each image
   - [x] Provide complete solution source code
   - [x] Include instructions for loading the database and starting the solution
   - [ ] Describe any alterations from the requested technology stack or user interface design
