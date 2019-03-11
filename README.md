@@ -15,7 +15,7 @@
   - Load data into local database
     - `mongoimport --jsonArray --db puppy-finder --collection puppies --file data.json`
   - Pull source code from GitHub
-    - TODO
+    - `git clone https://github.com/kylewhitaker/puppy-finder.git`
   - Spin up Server
     - `node server/server.js`
   - Spin up Client
