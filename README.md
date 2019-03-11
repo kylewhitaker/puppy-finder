@@ -1,4 +1,4 @@
-# Puppy Finder
+# Puppy Finder!
 
 ## MERN tech stack
   - React.js front-end
@@ -38,7 +38,10 @@
   - [x] Plot the bounding boxes for each image
   - [x] Provide complete solution source code
   - [x] Include instructions for loading the database and starting the solution
-  - [ ] Describe any alterations from the requested technology stack or user interface design
+  - [x] Describe any alterations from the requested technology stack or user interface design
   - [x] When you are ready to begin, make an initial git commit with a blank README, .gitignore, or similar
-  - [ ] Your last commit should be no longer than 4 hours from your first
-  - [ ] Push your submission to a public git repository and email us the link for review
+  - [x] Your last commit should be no longer than 4 hours from your first
+  - [x] Push your submission to a public git repository and email us the link for review
+
+## Notes
+  - I chose a photo carousel NPM package that was clean-looking and fairly easy to implement. I'm pleased with the way it turned out!
